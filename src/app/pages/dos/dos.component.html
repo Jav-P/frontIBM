@@ -1,47 +1,58 @@
 <div class="position-absolute top-50 start-50 translate-middle">
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Nombre</span>
-        <input type="text" class="form-control" placeholder="Nombre" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">telefono</span>
-        <input type="number" class="form-control" placeholder="telefono" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">tipoEntrevista</span>
-        <input type="text" class="form-control" placeholder="tipoEntrevista">
-    </div>
-    <div class="input-group mb-3">
-        <input type="date" class="form-control">
-        <span class="input-group-text" id="basic-addon2">25/07/2005</span>
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">edad</span>
-        <input type="number" class="form-control" placeholder="edad" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">estadoCivil</span>
-        <input type="text" class="form-control" placeholder="estadoCivil" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">edades</span>
-        <input type="number" class="form-control" placeholder="edades" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">ingresos</span>
-        <input type="number" class="form-control" placeholder="ingresos" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">actividadEconomica</span>
-        <input type="number" class="form-control" placeholder="actividadEconomica" >
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">fuentesProspecto</span>
-        <input type="number" class="form-control" placeholder="fuentesProspecto" >
-    </div>
+    <form (ngSubmit)="guardar(prospecto.value)" #prospecto="ngForm">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" disabled>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Teléfono</span>
+            <input type="number" class="form-control" name="telefono" [(ngModel)]="telefono" disabled>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Tipo de Entrevista</span>
+            <input type="text" class="form-control" placeholder="Tipo de Entrevista" name="tipoEntrevista" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">Fecha de Reunión</span>
+            <input type="date" class="form-control" name="fecha" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Edad</span>
+            <input type="number" class="form-control" placeholder="Edad" name="edad" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Estado Civil</span>
+            <input type="text" class="form-control" placeholder="Estado Civil" name="estadoCivil" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"># hijos</span>
+            <input type="number" class="form-control" placeholder="# hijos" name="hijos" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Edades</span>
+            <input type="number" class="form-control" placeholder="Edades" name="edades" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ingresos</span>
+            <input type="number" class="form-control" placeholder="Ingresos" name="ingresos" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Actividad Economica</span>
+            <input type="text" class="form-control" placeholder="Actividad Economica" name="actividadEconomica" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Fuente Prospecto</span>
+            <input type="text" class="form-control" name="fuentesProspecto" [(ngModel)]="fuente" disabled>
+        </div>
+    
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">bmi@example.com</span>
+            <input type="email" class="form-control" placeholder="Correo electronico" name="email" ngModel>
+        </div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary" >Guardar</button>
+        </div>
+    </form>
 
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">@example.com</span>
-    </div>
+     <!-- <pre>{{prospecto.value | json}}</pre> -->
 </div>
