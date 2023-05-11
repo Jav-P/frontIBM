@@ -1,0 +1,57 @@
+<div class="position-absolute top-50 start-50 translate-middle">
+    <form (ngSubmit)="guardar(primero.value)" #primero="ngForm">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <input type="text" class="form-control" placeholder="Nombre" name="nombre" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Apellido</span>
+            <input type="text" class="form-control" placeholder="Apellido" name="apellido" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">teléfono</span>
+            <input type="number" class="form-control" placeholder="teléfono" name="telefono" ngModel>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Fuente de Prospecto</span>
+            <select class="form-select" name="fuente" ngModel>
+                <option selected >Selecciona una opción</option>
+                <option value="Referido">Referido</option>
+                <option value="Entorno">Entorno</option>
+                <option value="Base de datos">Base de datos</option>
+                <option value="Trabajo en frio">Trabajo en frio</option>
+                <option value="Redes Sociales">Redes Sociales</option>
+                <option value="Entrega Digital">Entrega Digital</option>
+                <option value="Alianza Empresarial">Alianza Empresarial</option>
+                <option value="Asociaciones Profesionales">Asociaciones Profesionales</option>
+                <option value="Barrido Interno">Barrido Interno</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Contacto Realizado</span>
+            <select class="form-select" name=contacto ngModel>
+                <option selected>Selecciona una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Entrevista Concertada</span>
+            <select class="form-select" name="entrevista" ngModel>
+                <option selected>Selecciona una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="Pendiente">Pendiente</option>
+              </select>
+        </div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-primary" >Guardar</button>
+        </div>
+
+    </form>
+    <!-- <pre>{{primero.value | json}}</pre> -->
+    
+   
+   
+</div>
